@@ -1,6 +1,6 @@
 use anyhow::{Context, Result};
 use std::fs;
-use std::path::PathBuf;
+use std::path::{Path, PathBuf};
 
 pub fn cmd_convert(
     input: PathBuf,
@@ -47,7 +47,7 @@ pub fn cmd_convert(
     Ok(())
 }
 
-fn detect_format(path: &PathBuf) -> String {
+fn detect_format(path: &Path) -> String {
     if let Some(ext) = path.extension() {
         match ext.to_string_lossy().as_ref() {
             "gbln" => "gbln".to_string(),
