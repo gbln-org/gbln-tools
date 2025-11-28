@@ -1,3 +1,6 @@
+// Copyright (c) 2025 Vivian Burkhard Voss
+// SPDX-License-Identifier: Apache-2.0
+
 use anyhow::{Context, Result};
 use std::fs;
 use std::path::PathBuf;
